@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Kathia ALIOUA</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        #background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 5px 15px;
+        }
+        nav ul li a:hover {
+            color: #f0a500;
+        }
+        .home-section, .about-section, .projects-section, .skills-section, .cv-section {
+            text-align: center;
+            color: white;
+            padding: 50px 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .home-section h1, .home-section p {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        .home-section h1 {
+            font-size: 3em;
+            animation-delay: 0.5s;
+        }
+        .home-section p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            animation-delay: 1.5s;
+        }
+        .profile-picture {
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 2.5s;
+        }
+        .profile-picture img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #f0a500;
+        }
+        .home-section .footer-text {
+            margin-top: 30px;
+            font-size: 1em;
+            color: #f0a500;
+        }
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+        .about-section p {
+            margin: 10px 0;
+            font-size: 1.2em;
+            line-height: 1.6em;
+        }
+        .skills-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .skill-card {
+            width: 120px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-card img {
+            width: 100%;
+            height: auto;
+            max-width: 100px;
+        }
+        .skill-card p {
+            margin-top: 10px;
+            font-size: 1em;
+        }
+        .skill-card:hover {
+            transform: scale(1.1);
+        }
+        .projects-section .project-card {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            margin: auto;
+            width: 300px;
+            color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .projects-section .project-card h3 {
+            margin: 10px 0;
+        }
+        .projects-section .project-card a {
+            text-decoration: none;
+            color: #f0a500;
+            background-color: black;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .projects-section .project-card a:hover {
+            background-color: #f0a500;
+            color: black;
+        }
+        .cv-section a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f0a500;
+            border-radius: 5px;
+            margin: auto;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .cv-section a:hover {
+            background-color: black;
+            color: #f0a500;
+        }
+        .cv-section p {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: white;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="fondaccueil.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo en arrière-plan.
+        </video>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À propos de moi</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="mailto:kathia.alioua@aivancity.education">📧</a></li>
+        </ul>
+    </nav>
+    <section id="home" class="home-section">
+        <h1>Hi, my name is Kathia ALIOUA</h1>
+        <p>Analyste Produit & Données | Expert en Gestion et Optimisation des Données | Intelligence d’Affaires</p>
+        <div class="profile-picture">
+            <img src="kathia.jpg" alt="Kathia ALIOUA">
+        </div>
+        <div class="footer-text">
+            Designed by Kathia Alioua with ❤️
+        </div>
+    </section>
+    <section id="about" class="about-section">
+        <h2>À propos de moi</h2>
+        <p>🔍 Analyste de Données et Produit orientée résultats, avec une expertise en gestion et optimisation des données pour la prise de décision stratégique.</p>
+        <p>🎓 Actuellement en alternance dans le cadre de mon Master en Data Management à Aivancity, j’affine mes compétences en analyse de données, gestion de produit, et innovation.</p>
+        <p>👥 En tant que Data Product Analyst, je collabore avec des équipes produit pour concevoir et valider de nouvelles fonctionnalités.</p>
+    </section>
+    <section id="skills" class="skills-section">
+        <h2>Compétences Techniques</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <img src="Excel.jpg" alt="Excel">
+                <p>Excel</p>
+            </div>
+            <div class="skill-card">
+                <img src="Power BI.jpg" alt="Power BI">
+                <p>Power BI</p>
+            </div>
+            <div class="skill-card">
+                <img src="Python.jpg" alt="Python">
+                <p>Python</p>
+            </div>
+            <div class="skill-card">
+                <img src="SQL.jpg" alt="SQL">
+                <p>SQL</p>
+            </div>
+            <div class="skill-card">
+                <img src="AWS.png" alt="AWS">
+                <p>AWS</p>
+            </div>
+            <div class="skill-card">
+                <img src="R.png" alt="R">
+                <p>R</p>
+            </div>
+            <div class="skill-card">
+                <img src="Jupyter.png" alt="Jupyter">
+                <p>Jupyter</p>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="projects-section">
+        <h2>Mes Projets</h2>
+        <div class="project-card">
+            <h3>Sentiment Analysis</h3>
+            <p>Exploration des sentiments des clients pour les compagnies aériennes.</p>
+            <p><strong>Tech Stack :</strong> Python, Machine Learning</p>
+            <a href="https://github.com/aliouakathia/Sentiment_Analysis_Airlines_Engagement" target="_blank">Voir sur GitHub</a>
+        </div>
+    </section>
+    <section id="cv" class="cv-section">
+        <h2>Mon CV</h2>
+        <a href="votre-fichier-cv.pdf" download>Télécharger CV</a>
+        <p>Découvrez plus sur mon parcours et mes réalisations.</p>
+    </section>
+</body>
+</html>
